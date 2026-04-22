@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrvaApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label/>
+            <Grid>
+                <Button
+                x:Name="jezik"
+                Text="Language: English"
+                Clicked="Klikjezik"
+                BackgroundColor="CornflowerBlue"
+                HorizontalOptions="Start" />
+                <Button
+                HorizontalOptions="End"
+                x:Name="dugmecr"
+                Text="Show credits"
+                Clicked="Klikcr"
+                BackgroundColor="CornflowerBlue" />
+            </Grid>
+            <Button
+                x:Name="slikajdugme"
+                Text="Take a photo"
+                Clicked="Slikaj"
+                BackgroundColor="CornflowerBlue"
+                />
+            <Image
+                x:Name="mestozasliku"
+                />
+            <Label
+                x:Name="imes"
+                />
+            <Label
+                x:Name="imet"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
