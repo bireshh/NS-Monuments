@@ -1,4 +1,6 @@
-﻿namespace PrvaApp
+﻿
+
+namespace PrvaApp
 {
     public partial class AppShell : Shell
     {
@@ -6,6 +8,7 @@
         {
             InitializeComponent();
             Routing.RegisterRoute("credit", typeof(CreditsStrana));
+            Routing.RegisterRoute("rezultat", typeof(Rezultat));
         }
     }
 }
