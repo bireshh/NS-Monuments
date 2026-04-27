@@ -12,7 +12,7 @@ namespace PrvaApp.Data
 
         public static async Task InitAsync()
         {
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "test_database.db");
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "database.db");
             _db = new SQLiteAsyncConnection(path);
         }
 

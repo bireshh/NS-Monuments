@@ -16,10 +16,10 @@ namespace PrvaApp.Data
 
         private static async Task CopyDatabaseIfNeeded()
         {
-            string dbPath = Path.Combine(BaseDir, "test_database.db");
+            string dbPath = Path.Combine(BaseDir, "database.db");
             if (File.Exists(dbPath)) return;
 
-            using var src = await FileSystem.OpenAppPackageFileAsync("test_database.db");
+            using var src = await FileSystem.OpenAppPackageFileAsync("database.db");
             using var dst = File.Create(dbPath);
             await src.CopyToAsync(dst);
         }

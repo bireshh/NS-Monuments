@@ -24,7 +24,7 @@ namespace PrvaApp
         // ── Init ──────────────────────────────────────────────────
         public async Task InitAsync()
         {
-            // AppInitService copies test_database.db
+            // AppInitService copies database.db
             await AppInitService.InitializeAsync();
 
             // DatabaseService opens the connection
