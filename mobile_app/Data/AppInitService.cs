@@ -13,7 +13,6 @@ namespace PrvaApp.Data
         {
             await CopyDatabaseIfNeeded();
         }
-
         private static async Task CopyDatabaseIfNeeded()
         {
             string dbPath = Path.Combine(BaseDir, "database.db");

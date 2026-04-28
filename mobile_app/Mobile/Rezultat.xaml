@@ -4,6 +4,9 @@
              x:Class="PrvaApp.Rezultat"
              Title="Rezultat">
     <VerticalStackLayout>
+        <Image
+            x:Name="prvaslika"
+            />
         <Label
             x:Name="prva"
             />
