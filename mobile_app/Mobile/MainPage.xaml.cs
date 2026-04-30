@@ -48,7 +48,6 @@ namespace PrvaApp
             jezik.Text = jezsr[0];
             slikajdugme.Text = jezsr[4];
             dugmecr.Text = jezsr[1];
-            
         }
         private void PromenijezikEN()
         {

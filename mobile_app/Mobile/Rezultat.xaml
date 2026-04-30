@@ -2,25 +2,117 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrvaApp.Rezultat"
-             Title="Rezultat">
-    <VerticalStackLayout>
-        <Image
+             Title="Results">
+    <VerticalStackLayout Padding="15">
+        <Grid Padding="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Image
             x:Name="prvaslika"
+            Aspect="AspectFill"
+            HorizontalOptions="Fill"
             />
-        <Label
-            x:Name="prva"
+            </Border>
+            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Label
+            x:Name="prvitekst"
+                    TextColor="Black"
+            Text="test"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
             />
-        <Label
-            x:Name="druga"
-            />
-        <Label
-            x:Name="treca"
-            />
-        <Label
-            x:Name="cetvrta"
-            />
-        <Label
-            x:Name="peta"
-            />
+            </Border>
+        </Grid>
+        <Grid Padding="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                <Image
+    x:Name="drugaslika"
+    Aspect="AspectFill"
+    HorizontalOptions="Fill"
+    />
+            </Border>
+            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Label
+    x:Name="drugitekst"
+    Text="test"
+                    TextColor="Black"
+    HorizontalTextAlignment="Center"
+    VerticalTextAlignment="Center"
+    />
+            </Border>
+        </Grid>
+        <Grid Padding="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                <Image
+    x:Name="trecaslika"
+    Aspect="AspectFill"
+    HorizontalOptions="Fill"
+    />
+            </Border>
+            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Label
+    x:Name="trecitekst"
+    Text="test"
+                    TextColor="Black"
+    HorizontalTextAlignment="Center"
+    VerticalTextAlignment="Center"
+    />
+            </Border>
+        </Grid>
+        <Grid Padding="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                <Image
+    x:Name="cetvrtaslika"
+    Aspect="AspectFill"
+    HorizontalOptions="Fill"
+    />
+            </Border>
+            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Label
+    x:Name="cetvrtitekst"
+    Text="test"
+                    TextColor="Black"
+    HorizontalTextAlignment="Center"
+    VerticalTextAlignment="Center"
+    />
+            </Border>
+        </Grid>
+        <Grid Padding="15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                <Image
+    x:Name="petaslika"
+    Aspect="AspectFill"
+    HorizontalOptions="Fill"
+    />
+            </Border>
+            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Label
+    x:Name="petitekst"
+    Text="test"
+                    TextColor="Black"
+    HorizontalTextAlignment="Center"
+    VerticalTextAlignment="Center"
+    />
+            </Border>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

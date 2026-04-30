@@ -12,23 +12,48 @@ namespace PrvaApp
 
         private static readonly string BaseDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-        private string NadjiSliku(string s)
+        public static string NadjiSliku(string s)
         {
+            s = Norm(s);
             string[] niz = s.Split(" ");
             string novi = string.Join("_", niz);
             return "Slike/" + novi + ".jpg";
         }
+        public static string Norm(string s)
+        {
+            //ćčšđžé
+            s = s.Replace('é', 'e');
+            s = s.Replace('ć', 'c');
+            s = s.Replace('Ć', 'c');
+            s = s.Replace('č', 'c');
+            s = s.Replace('Č', 'c');
+            s = s.Replace('š', 's');
+            s = s.Replace('Š', 's');
+            s = s.Replace('đ', 'd');
+            s = s.Replace('Đ', 'd');
+            s = s.Replace('Ž', 'z');
+            s = s.Replace('ž', 'z');
+            return s;
+        }
+        
         public List<RecognitionResult> Results
         {
             set
             {
-                string s = NadjiSliku(value[0].MonumentName); 
-                prvaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(s).Result);
-                prva.Text = "1. "+value[0].MonumentName+" " + value[0].Score.ToString();
-                druga.Text = "2. " + value[1].MonumentName + " " + value[1].Score.ToString();
-                treca.Text = "3. " + value[2].MonumentName + " " + value[2].Score.ToString();
-                cetvrta.Text = "4. " + value[3].MonumentName + " " + value[3].Score.ToString();
-                peta.Text = "5. " + value[4].MonumentName + " " + value[4].Score.ToString();
+                if (MainPage.jezikclicks == 1)
+                {
+                    this.Title = "Rezultat";
+                }
+                prvaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[0].MonumentName)).Result);
+                prvitekst.Text = value[0].MonumentName;
+                drugaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[1].MonumentName)).Result);
+                drugitekst.Text = value[1].MonumentName;
+                trecaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[2].MonumentName)).Result);
+                trecitekst.Text = value[2].MonumentName;
+                cetvrtaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[3].MonumentName)).Result);
+                cetvrtitekst.Text = value[3].MonumentName;
+                petaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[4].MonumentName)).Result);
+                petitekst.Text = value[4].MonumentName;
             }
         }
     }

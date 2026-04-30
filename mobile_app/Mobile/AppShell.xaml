@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PrvaApp"
     Title="NS Monuments"
+    Shell.TitleColor="CornflowerBlue"
     Shell.ForegroundColor="CornflowerBlue">
     <ShellContent ContentTemplate="{DataTemplate local:MainPage}" Route="glavna" />
 </Shell>

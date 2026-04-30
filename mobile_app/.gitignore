@@ -371,5 +371,4 @@ obj/
 onnxruntime.aar
 *.data
 *.onnx
- 
- 
+*.jpg

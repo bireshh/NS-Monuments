@@ -16,6 +16,10 @@ namespace PrvaApp
             get => tekst;
             set
             {
+                if (MainPage.jezikclicks == 1)
+                {
+                    this.Title = "Zasluge";
+                }
                 tekst = value;
                 credits.Text = tekst;
             }
