@@ -3,131 +3,134 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrvaApp.Rezultat"
              Title="Results">
-    <VerticalStackLayout Padding="15">
-        <Grid Padding="15">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="klik1"/>
-            </Grid.GestureRecognizers>
-            <Border Grid.Column="0" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
-                <Image
+    <Grid>
+        <Image Source="background.jpg" Opacity="0.5" Aspect="AspectFill"/>
+        <VerticalStackLayout Padding="15">
+            <Grid Padding="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="klik1"/>
+                </Grid.GestureRecognizers>
+                <Border Grid.Column="0" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                    <Image
             x:Name="prvaslika"
             Aspect="AspectFill"
             HorizontalOptions="Fill"
             />
-            </Border>
-            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
-                <Label
+                </Border>
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                    <Label
             x:Name="prvitekst"
                     TextColor="Black"
             Text="test"
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             />
-            </Border>
-        </Grid>
-        <Grid Padding="15">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="klik2"/>
-            </Grid.GestureRecognizers>
-            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                <Image
+                </Border>
+            </Grid>
+            <Grid Padding="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="klik2"/>
+                </Grid.GestureRecognizers>
+                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                    <Image
     x:Name="drugaslika"
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
-            </Border>
-            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
-                <Label
+                </Border>
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                    <Label
     x:Name="drugitekst"
     Text="test"
                     TextColor="Black"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
-            </Border>
-        </Grid>
-        <Grid Padding="15">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="klik3"/>
-            </Grid.GestureRecognizers>
-            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                <Image
+                </Border>
+            </Grid>
+            <Grid Padding="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="klik3"/>
+                </Grid.GestureRecognizers>
+                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                    <Image
     x:Name="trecaslika"
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
-            </Border>
-            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
-                <Label
+                </Border>
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                    <Label
     x:Name="trecitekst"
     Text="test"
                     TextColor="Black"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
-            </Border>
-        </Grid>
-        <Grid Padding="15">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="klik4"/>
-            </Grid.GestureRecognizers>
-            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                <Image
+                </Border>
+            </Grid>
+            <Grid Padding="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="klik4"/>
+                </Grid.GestureRecognizers>
+                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                    <Image
     x:Name="cetvrtaslika"
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
-            </Border>
-            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
-                <Label
+                </Border>
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                    <Label
     x:Name="cetvrtitekst"
     Text="test"
                     TextColor="Black"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
-            </Border>
-        </Grid>
-        <Grid Padding="15">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="klik5"/>
-            </Grid.GestureRecognizers>
-            <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                <Image
+                </Border>
+            </Grid>
+            <Grid Padding="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="klik5"/>
+                </Grid.GestureRecognizers>
+                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
+                    <Image
     x:Name="petaslika"
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
-            </Border>
-            <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
-                <Label
+                </Border>
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                    <Label
     x:Name="petitekst"
     Text="test"
                     TextColor="Black"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
-            </Border>
-        </Grid>
-    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

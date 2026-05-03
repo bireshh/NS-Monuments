@@ -3,14 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrvaApp.Info"
              Title="Informations">
-    <ScrollView>
-    <VerticalStackLayout>
-        <Image 
+    <Grid>
+        <Image Source="background.jpg" Opacity="0.5" Aspect="AspectFill"/>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Border StrokeShape="RoundRectangle 10">
+            <Image 
             x:Name="slika"
             />
-        <Label
+                </Border>
+                <Label
             x:Name="tekst" FontSize="Large"
             />
-    </VerticalStackLayout>
-    </ScrollView>
+        </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

@@ -60,11 +60,14 @@ namespace PrvaApp
             FileResult slika = await MediaPicker.Default.CapturePhotoAsync();
             if (slika != null)
             {
-                string localFilePath = Path.Combine(FileSystem.CacheDirectory, slika.FileName);
-                using Stream sourceStream = await slika.OpenReadAsync();
-                using FileStream localFileStream = File.OpenWrite(localFilePath);
-                await sourceStream.CopyToAsync(localFileStream);
-                mestozasliku.Source = ImageSource.FromFile(localFilePath);
+                if (jezikclicks == 0)
+                {
+                    tekstcekaj.Text = "This process may take a few seconds";
+                }
+                else
+                {
+                    tekstcekaj.Text = "Ovaj proces može da potraje nekoliko sekundi";
+                }
                 using var stream = await slika.OpenReadAsync();
                 using var ms = new MemoryStream();
                 await stream.CopyToAsync(ms);
@@ -76,6 +79,7 @@ namespace PrvaApp
                     { "results", results }
                 };
                 await Shell.Current.GoToAsync("rezultat", navigationParameter);
+                tekstcekaj.Text = "";
             }
         }
     }

@@ -5,14 +5,17 @@
              x:Class="PrvaApp.CreditsStrana"
              Title="Credits"
              >
-    <VerticalStackLayout Spacing="20">
-        <Label></Label>
-        <Label 
+    <Grid>
+        <Image Source="background.jpg" Opacity="0.5" Aspect="AspectFill"/>
+        <VerticalStackLayout Spacing="20">
+            <Label></Label>
+            <Label 
             x:Name="credits"
             Text=""
             FontSize="20"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             HorizontalTextAlignment="Center"/>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
