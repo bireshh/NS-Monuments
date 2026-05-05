@@ -4,7 +4,7 @@
              x:Class="PrvaApp.Rezultat"
              Title="Results">
     <Grid>
-        <Image Source="background.jpg" Opacity="0.5" Aspect="AspectFill"/>
+        <Image Source="background.jpg" Opacity="0.3" Aspect="AspectFill"/>
         <VerticalStackLayout Padding="15">
             <Grid Padding="15">
                 <Grid.ColumnDefinitions>
@@ -20,6 +20,12 @@
             Aspect="AspectFill"
             HorizontalOptions="Fill"
             />
+                    <Border.Shadow>
+                        <Shadow
+                            Brush="#80000000"
+                            Offset="0,8"
+                            Radius="15" />
+                        </Border.Shadow>
                 </Border>
                 <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
                     <Label
@@ -29,6 +35,12 @@
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
             </Grid>
             <Grid Padding="15">
@@ -45,6 +57,12 @@
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
                 <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
                     <Label
@@ -54,6 +72,12 @@
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
             </Grid>
             <Grid Padding="15">
@@ -70,6 +94,12 @@
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
                 <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
                     <Label
@@ -79,6 +109,12 @@
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
             </Grid>
             <Grid Padding="15">
@@ -95,6 +131,12 @@
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
                 <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
                     <Label
@@ -104,6 +146,12 @@
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
             </Grid>
             <Grid Padding="15">
@@ -120,6 +168,12 @@
     Aspect="AspectFill"
     HorizontalOptions="Fill"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
                 <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
                     <Label
@@ -129,6 +183,12 @@
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
+                    <Border.Shadow>
+                        <Shadow
+        Brush="#80000000"
+        Offset="0,8"
+        Radius="15" />
+                    </Border.Shadow>
                 </Border>
             </Grid>
         </VerticalStackLayout>

@@ -6,7 +6,7 @@
              Title="Credits"
              >
     <Grid>
-        <Image Source="background.jpg" Opacity="0.5" Aspect="AspectFill"/>
+        <Image Source="background.jpg" Opacity="0.3" Aspect="AspectFill"/>
         <VerticalStackLayout Spacing="20">
             <Label></Label>
             <Label 
@@ -15,7 +15,14 @@
             FontSize="20"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"/>
+            HorizontalTextAlignment="Center">
+                <Label.Shadow>
+                    <Shadow
+            Brush="#80000000"
+            Offset="1,2"
+            Radius="3" />
+                </Label.Shadow>
+            </Label>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

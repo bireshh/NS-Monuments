@@ -23,13 +23,13 @@ namespace PrvaApp
             //ćčšđžé
             s = s.Replace('é', 'e');
             s = s.Replace('ć', 'c');
-            s = s.Replace('Ć', 'c');
+            s = s.Replace('Ć', 'C');
             s = s.Replace('č', 'c');
-            s = s.Replace('Č', 'c');
+            s = s.Replace('Č', 'C');
             s = s.Replace('š', 's');
-            s = s.Replace('Š', 's');
+            s = s.Replace('Š', 'S');
             s = s.Replace('đ', 'd');
-            s = s.Replace('Đ', 'd');
+            s = s.Replace('Đ', 'D');
             s = s.Replace('Ž', 'Z');
             s = s.Replace('ž', 'z');
             return s;

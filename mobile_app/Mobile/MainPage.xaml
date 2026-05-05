@@ -4,37 +4,120 @@
              x:Class="PrvaApp.MainPage">
 
     <Grid>
-        <Image Source="background.jpg" Opacity="0.5" Aspect="AspectFill"/>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <Image Source="background.jpg" Opacity="0.3" Aspect="AspectFill" />
+        <Grid
+            Padding="30,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
             <Label/>
-            <Grid>
-                <Button
+            <Grid Grid.Row="0" Padding="20" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label
+                Text="NS Monuments"
+                FontSize="22"
+                TextColor="White"
+                FontAttributes="Bold" />
+                <Button Grid.Column="1"
                 x:Name="jezik"
-                Text="Language: English"
+                Text="🌐"
                 Clicked="Klikjezik"
                 BackgroundColor="CornflowerBlue"
-                HorizontalOptions="Start" />
-                <Button
-                HorizontalOptions="End"
+                Opacity="0.8"
+                WidthRequest="50"
+                HeightRequest="50"
+                CornerRadius="25" >
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="#80000000"
+                            Offset="0,8"
+                            Radius="15" />
+                    </Button.Shadow>
+                </Button>
+                <Button Grid.Column="2"
                 x:Name="dugmecr"
-                Text="Show credits"
+                Text="ℹ️"
                 Clicked="Klikcr"
-                BackgroundColor="CornflowerBlue" />
-            </Grid>
+                BackgroundColor="CornflowerBlue" 
+                Opacity="0.8" 
+                WidthRequest="50"
+                HeightRequest="50"
+                CornerRadius="25" >
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="#80000000"
+                            Offset="0,8"
+                            Radius="15" />
+                    </Button.Shadow>
+                </Button>
+                </Grid>
+            <VerticalStackLayout Grid.Row="1" HorizontalOptions="Fill"
+                VerticalOptions="Center"
+                Padding="30"
+                Spacing="20">
+            <Label
+                x:Name="sken"
+                Text="Scan monuments offline"
+                TextColor="White"
+                FontSize="18"
+                HorizontalOptions="Center" ><Label.Shadow>
+                <Shadow
+                    Brush="#80000000"
+                    Offset="1,2"
+                    Radius="3" />
+                </Label.Shadow>
+            </Label> 
             <Button
                 x:Name="slikajdugme"
-                Text="Take a photo"
+                HeightRequest="75"
+                CornerRadius="35"
+                Text="📷 Take a photo"
+                FontAttributes="Bold"
                 Clicked="Slikaj"
+                TextColor="White"
                 BackgroundColor="CornflowerBlue"
-                />
+                Opacity="0.8"
+                >
+                <Button.Shadow>
+                    <Shadow
+                        Brush="#80000000"
+                        Offset="0,8"
+                        Radius="15" />
+                </Button.Shadow>
+            </Button>
             <Label
                 x:Name="tekstcekaj"
-                HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
-                />
-
-        </VerticalStackLayout>
+                >
+                <Label.Shadow>
+                    <Shadow
+                        Brush="#80000000"
+                        Offset="1,2"
+                        Radius="3" />
+                </Label.Shadow>
+            </Label>
+            </VerticalStackLayout>
+            <Label Grid.Row="2"
+                x:Name="dole"
+                Text="Point your camera at a monument"
+                TextColor="White"
+                FontSize="14"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,0,0,20">
+                <Label.Shadow>
+                    <Shadow
+                        Brush="#80000000"
+                        Offset="1,2"
+                        Radius="3" />
+                </Label.Shadow>
+            </Label>
+        </Grid>
     </Grid>
 </ContentPage>

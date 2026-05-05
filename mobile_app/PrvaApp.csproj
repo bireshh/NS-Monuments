@@ -19,6 +19,9 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
+		<PublishTrimmed>true</PublishTrimmed>
+		<TrimMode>link</TrimMode>
+
 		<!-- Enable XAML source generation for faster build times and improved performance.
 		     This generates C# code from XAML at compile time instead of runtime inflation.
 		     To disable, remove this line.
@@ -50,47 +53,47 @@
 		<Product>NS Monuments</Product>
 		<PackageIcon>appicon.png</PackageIcon>
 		<Authors>Ivan Bireš, Luka Pećo</Authors>
-		<Company />
+		<Company>LIPB</Company>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-android|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-ios|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-maccatalyst|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net10.0-android|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net10.0-ios|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net10.0-maccatalyst|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net10.0-windows10.0.19041.0|AnyCPU'">
 	  <ApplicationTitle>NS Monuments</ApplicationTitle>
-	  <ApplicationId>com.companyname.nsmonuments</ApplicationId>
+	  <ApplicationId>com.lipb.nsmonuments</ApplicationId>
 	</PropertyGroup>
 
 	<ItemGroup>

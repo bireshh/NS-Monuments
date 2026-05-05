@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Maui.Media;
+using SkiaSharp;
 using SQLite;
 namespace PrvaApp
 {
@@ -7,8 +8,8 @@ namespace PrvaApp
     {
 
         public static int jezikclicks = 0;
-        static string[] jezen ={ "Language: English", "Show credits", "Hide credits", "Peope who have helped with collecting data:\nUroš Pejaković\nAleksandar Provči\nMilan Gašić\nNebojša Tadić\nLara Ilić","Take a photo" } ;
-        static string[] jezsr = { "Jezik: Srpski", "Prikaži zasluge", "Sakrij zasluge", "Ljudi koji su pomogli sa prikupljanjem podataka:\nUroš Pejaković\nAleksandar Provči\nMilan Gašić\nNebojša Tadić\nLara Ilić","Slikaj" };
+        static string[] jezen ={ "Language: English", "Show credits", "Hide credits", "Peope who have helped with collecting data:\nUroš Pejaković\nAleksandar Provči\nMilan Gašić\nNebojša Tadić\nLara Ilić", "📷 Take a photo", "Scan monuments offline", "Point your camera at a monument" } ;
+        static string[] jezsr = { "Jezik: Srpski", "Prikaži zasluge", "Sakrij zasluge", "Ljudi koji su pomogli sa prikupljanjem podataka:\nUroš Pejaković\nAleksandar Provči\nMilan Gašić\nNebojša Tadić\nLara Ilić", "📷 Slikaj","Skenirajte spomenike offline","Usmerite kameru ka spomeniku"};
         static string t = jezen[3];
 
         public MainPage()
@@ -27,8 +28,8 @@ namespace PrvaApp
             {
                  t = jezsr[3];
             }
-            if (jezikclicks == 0) { dugmecr.Text = jezen[1]; t = jezen[3]; }
-            else { dugmecr.Text = jezsr[1]; t = jezsr[3]; }
+            if (jezikclicks == 0) {  t = jezen[3]; }
+            else { t = jezsr[3]; }
         }
         private void Klikjezik(object sender, EventArgs e)
         {
@@ -45,15 +46,15 @@ namespace PrvaApp
         }
         private void PromenijezikSR()
         {
-            jezik.Text = jezsr[0];
             slikajdugme.Text = jezsr[4];
-            dugmecr.Text = jezsr[1];
+            sken.Text= jezsr[5];
+            dole.Text = jezsr[6];
         }
         private void PromenijezikEN()
         {
-            jezik.Text = jezen[0];
             slikajdugme.Text = jezen[4];
-            dugmecr.Text = jezen[1];
+            sken.Text = jezen[5];
+            dole.Text= jezen[6];
         }
         private async void Slikaj(object sender, EventArgs e)
         {
