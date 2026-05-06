@@ -6,7 +6,7 @@
     <Grid>
         <Image Source="background.jpg" Opacity="0.3" Aspect="AspectFill"/>
         <VerticalStackLayout Padding="15">
-            <Grid Padding="15">
+            <Grid Padding="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="3*"/>
@@ -27,10 +27,10 @@
                             Radius="15" />
                         </Border.Shadow>
                 </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
                     <Label
             x:Name="prvitekst"
-                    TextColor="Black"
+                    TextColor="White"
             Text="test"
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
@@ -43,7 +43,7 @@
                     </Border.Shadow>
                 </Border>
             </Grid>
-            <Grid Padding="15">
+            <Grid Padding="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="3*"/>
@@ -64,11 +64,11 @@
         Radius="15" />
                     </Border.Shadow>
                 </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
                     <Label
     x:Name="drugitekst"
     Text="test"
-                    TextColor="Black"
+                    TextColor="White"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
@@ -80,7 +80,7 @@
                     </Border.Shadow>
                 </Border>
             </Grid>
-            <Grid Padding="15">
+            <Grid Padding="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="3*"/>
@@ -101,11 +101,11 @@
         Radius="15" />
                     </Border.Shadow>
                 </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
                     <Label
     x:Name="trecitekst"
     Text="test"
-                    TextColor="Black"
+                    TextColor="White"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
@@ -117,7 +117,7 @@
                     </Border.Shadow>
                 </Border>
             </Grid>
-            <Grid Padding="15">
+            <Grid Padding="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="3*"/>
@@ -138,11 +138,11 @@
         Radius="15" />
                     </Border.Shadow>
                 </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
                     <Label
     x:Name="cetvrtitekst"
     Text="test"
-                    TextColor="Black"
+                    TextColor="White"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />
@@ -154,7 +154,7 @@
                     </Border.Shadow>
                 </Border>
             </Grid>
-            <Grid Padding="15">
+            <Grid Padding="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="3*"/>
@@ -175,11 +175,11 @@
         Radius="15" />
                     </Border.Shadow>
                 </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
+                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
                     <Label
     x:Name="petitekst"
     Text="test"
-                    TextColor="Black"
+                    TextColor="White"
     HorizontalTextAlignment="Center"
     VerticalTextAlignment="Center"
     />

@@ -7,7 +7,9 @@ namespace PrvaApp
     public class RecognitionResult
     {
         public string MonumentName { get; set; }
+        public string MonumentNameSerbian {  get; set; }
         public string Description { get; set; }
+        public string DescriptionSerbian { get; set; }
         public float Score { get; set; }
     }
 
@@ -21,25 +23,19 @@ namespace PrvaApp
     {
         private List<CachedVector> _vectorCache = new();
 
-        // ── Init ──────────────────────────────────────────────────
         public async Task InitAsync()
         {
-            // AppInitService copies database.db
             await AppInitService.InitializeAsync();
 
-            // DatabaseService opens the connection
             await DatabaseService.InitAsync();
 
-            // EmbeddingService copies and loads inference_model.onnx
             await EmbeddingService.InitAsync();
 
-            // Cache all vectors from DB into memory
             await WarmUpAsync();
         }
 
         private async Task WarmUpAsync()
         {
-            // GetAllWithEmbeddingsAsync loads monuments + attaches float[] embeddings
             var monuments = await DatabaseService.GetAllWithEmbeddingsAsync();
 
             _vectorCache = monuments
@@ -52,13 +48,10 @@ namespace PrvaApp
                 .ToList();
         }
 
-        // ── Recognition ───────────────────────────────────────────
         public async Task<List<RecognitionResult>> RecognizeAsync(byte[] imageBytes, int topN = 3)
         {
-            // Run inference on background thread — keeps UI responsive
             float[] queryEmbedding = await Task.Run(() => EmbeddingService.GetEmbedding(imageBytes));
 
-            // Dot product == cosine similarity since embeddings are L2-normalized
             var results = _vectorCache
                 .Select(v => (
                     name: v.MonumentName,
@@ -68,25 +61,28 @@ namespace PrvaApp
                 .Select(g => new RecognitionResult
                 {
                     MonumentName = g.Key,
-                    Score = g.Max(x => x.score) // best single vector per monument
+                    Score = g.Max(x => x.score) 
                 })
                 .OrderByDescending(x => x.Score)
                 .Take(topN)
                 .ToList();
 
-            // Enrich with descriptions from monument list
             var monuments = await DatabaseService.GetAllWithEmbeddingsAsync();
             foreach (var result in results)
             {
                 var monument = monuments.FirstOrDefault(m => m.MonumentName == result.MonumentName);
                 if (monument != null)
+                {
                     result.Description = monument.MonumentDescription;
+                    result.MonumentNameSerbian = monument.MonumentNameSerbian;
+                    result.DescriptionSerbian = monument.MonumentDescriptionSerbian;
+                }
+                
             }
 
             return results;
         }
 
-        // ── Math ──────────────────────────────────────────────────
         private static float DotProduct(float[] a, float[] b)
         {
             float dot = 0f;

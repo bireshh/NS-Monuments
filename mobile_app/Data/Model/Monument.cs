@@ -13,6 +13,10 @@ namespace PrvaApp.Data.Model
 
         [Column("monument_description")]
         public string MonumentDescription { get; set; }
+        [Column("monument_name_serbian")]
+        public string MonumentNameSerbian { get; set; }
+        [Column("monument_description_serbian")]
+        public string MonumentDescriptionSerbian { get; set; }
 
         [Ignore]
         public List<float[]> Embeddings { get; set; } = new();

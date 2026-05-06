@@ -1,4 +1,4 @@
-namespace PrvaApp
+﻿namespace PrvaApp
 {
 
     [QueryProperty(nameof(Results), "results")]
@@ -20,18 +20,17 @@ namespace PrvaApp
         }
         public static string Norm(string s)
         {
-            //ćčšđžé
             s = s.Replace('é', 'e');
             s = s.Replace('ć', 'c');
-            s = s.Replace('Ć', 'C');
-            s = s.Replace('č', 'c');
-            s = s.Replace('Č', 'C');
-            s = s.Replace('š', 's');
-            s = s.Replace('Š', 'S');
-            s = s.Replace('đ', 'd');
-            s = s.Replace('Đ', 'D');
-            s = s.Replace('Ž', 'Z');
-            s = s.Replace('ž', 'z');
+            s = s.Replace('Ć','c');
+            s = s.Replace('č','c');
+            s = s.Replace('Č','C');
+            s = s.Replace('Š','S');
+            s = s.Replace('š','s');
+            s = s.Replace('đ','d');
+            s = s.Replace('Đ','D');
+            s = s.Replace('Ž','Z');
+            s = s.Replace('ž','z');
             return s;
         }
         
@@ -39,10 +38,6 @@ namespace PrvaApp
         {
             set
             {
-                if (MainPage.jezikclicks == 1)
-                {
-                    this.Title = "Rezultat";
-                }
                 rez = value;
                 prvaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[0].MonumentName)).Result);
                 prvitekst.Text = value[0].MonumentName;
@@ -54,6 +49,15 @@ namespace PrvaApp
                 cetvrtitekst.Text = value[3].MonumentName;
                 petaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[4].MonumentName)).Result);
                 petitekst.Text = value[4].MonumentName;
+                if (MainPage.jezikclicks == 1)
+                {
+                    this.Title = "Rezultat";
+                    prvitekst.Text = value[0].MonumentNameSerbian;
+                    drugitekst.Text = value[1].MonumentNameSerbian;
+                    trecitekst.Text = value[2].MonumentNameSerbian;
+                    cetvrtitekst.Text = value[3].MonumentNameSerbian;
+                    petitekst.Text = value[4].MonumentNameSerbian;
+                }
             }
         }
         private async void klik1(Object sender , EventArgs e)

@@ -14,12 +14,16 @@ public partial class Info : ContentPage
 		{
 			if (MainPage.jezikclicks == 1)
 			{
-
+				this.Title = value.MonumentNameSerbian;
+				tekst.Text = value.DescriptionSerbian;
 			}
+			else
+			{
+                this.Title = value.MonumentName;
+                tekst.Text = value.Description;
+            }
 			rez = value;
-            this.Title = value.MonumentName;
             slika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(Rezultat.NadjiSliku(value.MonumentName)).Result);
-            tekst.Text = value.Description;
         }
 	}
 }
