@@ -22,7 +22,7 @@
         {
             s = s.Replace('é', 'e');
             s = s.Replace('ć', 'c');
-            s = s.Replace('Ć','c');
+            s = s.Replace('Ć','C');
             s = s.Replace('č','c');
             s = s.Replace('Č','C');
             s = s.Replace('Š','S');
@@ -57,6 +57,7 @@
                     trecitekst.Text = value[2].MonumentNameSerbian;
                     cetvrtitekst.Text = value[3].MonumentNameSerbian;
                     petitekst.Text = value[4].MonumentNameSerbian;
+                    infot.Text = "Kliknite za više informacija";
                 }
             }
         }

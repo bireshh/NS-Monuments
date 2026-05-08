@@ -191,6 +191,17 @@
                     </Border.Shadow>
                 </Border>
             </Grid>
+            <Label
+                x:Name="infot"
+                Text="Click for more information"
+                HorizontalTextAlignment="Center">
+                <Label.Shadow>
+                    <Shadow
+                            Brush="#80000000"
+                            Offset="1,2"
+                            Radius="3" />
+                </Label.Shadow>
+            </Label>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
