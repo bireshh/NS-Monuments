@@ -49,6 +49,7 @@
                 cetvrtitekst.Text = value[3].MonumentName;
                 petaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[4].MonumentName)).Result);
                 petitekst.Text = value[4].MonumentName;
+                najb.Text = "★ Best Match";
                 if (MainPage.jezikclicks == 1)
                 {
                     this.Title = "Rezultat";
@@ -58,6 +59,7 @@
                     cetvrtitekst.Text = value[3].MonumentNameSerbian;
                     petitekst.Text = value[4].MonumentNameSerbian;
                     infot.Text = "Kliknite za više informacija";
+                    najb.Text = "★ Najsličnije";
                 }
             }
         }

@@ -6,6 +6,17 @@
     <Grid>
         <Image Source="background.jpg" Opacity="0.3" Aspect="AspectFill"/>
         <VerticalStackLayout Padding="15">
+            <Label
+                x:Name="najb"
+                HorizontalTextAlignment="Center"
+                FontSize="Subtitle">
+                <Label.Shadow>
+                    <Shadow
+                         Brush="#80000000"
+                           Offset="1,2"
+                            Radius="3" />
+                </Label.Shadow>
+            </Label>
             <Grid Padding="25">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>

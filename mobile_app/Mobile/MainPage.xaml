@@ -23,7 +23,7 @@
                 Text="NS Monuments"
                 FontSize="22"
                 TextColor="White"
-                FontAttributes="Bold" />
+                FontAttributes="Bold" VerticalOptions="Center"/>
                 <Button Grid.Column="1"
                 x:Name="jezik"
                 Text="🌐"
