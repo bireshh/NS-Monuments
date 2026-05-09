@@ -1,218 +1,97 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PrvaApp"
              x:Class="PrvaApp.Rezultat"
              Title="Results">
     <Grid>
         <Image Source="background.jpg" Opacity="0.3" Aspect="AspectFill"/>
-        <VerticalStackLayout Padding="15">
-            <Label
-                x:Name="najb"
-                HorizontalTextAlignment="Center"
-                FontSize="Subtitle">
-                <Label.Shadow>
-                    <Shadow
-                         Brush="#80000000"
-                           Offset="1,2"
-                            Radius="3" />
-                </Label.Shadow>
-            </Label>
-            <Grid Padding="25">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="klik1"/>
-                </Grid.GestureRecognizers>
-                <Border Grid.Column="0" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 10">
-                    <Image
-            x:Name="prvaslika"
-            Aspect="AspectFill"
-            HorizontalOptions="Fill"
-            />
-                    <Border.Shadow>
-                        <Shadow
-                            Brush="#80000000"
-                            Offset="0,8"
-                            Radius="15" />
-                        </Border.Shadow>
-                </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
-                    <Label
-            x:Name="prvitekst"
-                    TextColor="White"
-            Text="test"
-            HorizontalTextAlignment="Center"
-            VerticalTextAlignment="Center"
-            />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-            </Grid>
-            <Grid Padding="25">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="klik2"/>
-                </Grid.GestureRecognizers>
-                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                    <Image
-    x:Name="drugaslika"
-    Aspect="AspectFill"
-    HorizontalOptions="Fill"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
-                    <Label
-    x:Name="drugitekst"
-    Text="test"
-                    TextColor="White"
-    HorizontalTextAlignment="Center"
-    VerticalTextAlignment="Center"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-            </Grid>
-            <Grid Padding="25">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="klik3"/>
-                </Grid.GestureRecognizers>
-                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                    <Image
-    x:Name="trecaslika"
-    Aspect="AspectFill"
-    HorizontalOptions="Fill"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
-                    <Label
-    x:Name="trecitekst"
-    Text="test"
-                    TextColor="White"
-    HorizontalTextAlignment="Center"
-    VerticalTextAlignment="Center"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-            </Grid>
-            <Grid Padding="25">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="klik4"/>
-                </Grid.GestureRecognizers>
-                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                    <Image
-    x:Name="cetvrtaslika"
-    Aspect="AspectFill"
-    HorizontalOptions="Fill"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
-                    <Label
-    x:Name="cetvrtitekst"
-    Text="test"
-                    TextColor="White"
-    HorizontalTextAlignment="Center"
-    VerticalTextAlignment="Center"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-            </Grid>
-            <Grid Padding="25">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="klik5"/>
-                </Grid.GestureRecognizers>
-                <Border Grid.Column="0" BackgroundColor="Transparent" StrokeShape="RoundRectangle 10">
-                    <Image
-    x:Name="petaslika"
-    Aspect="AspectFill"
-    HorizontalOptions="Fill"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-                <Border Grid.Column="1" BackgroundColor="CornflowerBlue" StrokeShape="RoundRectangle 35">
-                    <Label
-    x:Name="petitekst"
-    Text="test"
-                    TextColor="White"
-    HorizontalTextAlignment="Center"
-    VerticalTextAlignment="Center"
-    />
-                    <Border.Shadow>
-                        <Shadow
-        Brush="#80000000"
-        Offset="0,8"
-        Radius="15" />
-                    </Border.Shadow>
-                </Border>
-            </Grid>
-            <Label
-                x:Name="infot"
-                Text="Click for more information"
-                HorizontalTextAlignment="Center">
-                <Label.Shadow>
-                    <Shadow
-                            Brush="#80000000"
-                            Offset="1,2"
-                            Radius="3" />
-                </Label.Shadow>
-            </Label>
-        </VerticalStackLayout>
+        <CollectionView x:Name="resultsCollection"
+                        SelectionMode="Single"
+                        SelectionChanged="OnResultSelected"
+                        Margin="0,8,0,0">
+            <CollectionView.Header>
+                <Label x:Name="infot"
+                       Text="Tap a result for more info"
+                       TextColor="White"
+                       FontSize="13"
+                       Opacity="0.85"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,16,0,6">
+                    <Label.Shadow>
+                        <Shadow Brush="#80000000" Offset="1,2" Radius="3"/>
+                    </Label.Shadow>
+                </Label>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:ResultDisplay">
+                    <Grid Padding="16,6">
+                        <Border StrokeThickness="0"
+                                StrokeShape="RoundRectangle 18"
+                                Padding="12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStop Color="#CC6495ED" Offset="0"/>
+                                    <GradientStop Color="#AA3A6BC8" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Shadow>
+                                <Shadow Brush="#60000000" Offset="0,6" Radius="12"/>
+                            </Border.Shadow>
+                            <Grid ColumnSpacing="12">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="32"/>
+                                    <ColumnDefinition Width="65"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0"
+                                        BackgroundColor="#40FFFFFF"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 16"
+                                        WidthRequest="32" HeightRequest="32"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center">
+                                    <Label Text="{Binding Rank}"
+                                           TextColor="White"
+                                           FontSize="14"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+                                </Border>
+                                <Border Grid.Column="1"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 10"
+                                        HeightRequest="60">
+                                    <Image Source="{Binding Image}"
+                                           Aspect="AspectFill"
+                                           HorizontalOptions="Fill"
+                                           VerticalOptions="Fill"/>
+                                </Border>
+                                <VerticalStackLayout Grid.Column="2"
+                                                     VerticalOptions="Center"
+                                                     Spacing="5">
+                                    <Border BackgroundColor="#44FFD700"
+                                            Stroke="#80FFD700"
+                                            StrokeThickness="1"
+                                            StrokeShape="RoundRectangle 8"
+                                            Padding="7,3"
+                                            HorizontalOptions="Start"
+                                            IsVisible="{Binding IsBestMatch}">
+                                        <Label Text="{Binding BestMatchLabel}"
+                                               TextColor="#FFD700"
+                                               FontSize="10"
+                                               FontAttributes="Bold"/>
+                                    </Border>
+                                    <Label Text="{Binding Name}"
+                                           TextColor="White"
+                                           FontSize="15"
+                                           FontAttributes="Bold"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>

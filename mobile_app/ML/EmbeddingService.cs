@@ -17,7 +17,6 @@ namespace PrvaApp.ML
                 "inference_model.onnx"
             );
 
-            // Copy model from assets on first run (same pattern as DB)
             if (!File.Exists(modelPath))
             {
                 using var src = await FileSystem.OpenAppPackageFileAsync("inference_model.onnx");
@@ -35,13 +34,11 @@ namespace PrvaApp.ML
 
             var inputs = new List<NamedOnnxValue>
             {
-                NamedOnnxValue.CreateFromTensor("input", tensor) // match your ONNX input name
+                NamedOnnxValue.CreateFromTensor("input", tensor)
             };
 
             using var results = _session.Run(inputs);
             var embedding = results.First().AsEnumerable<float>().ToArray();
-
-            // L2 normalize (model does this too, but safe to repeat)
             float norm = MathF.Sqrt(embedding.Sum(x => x * x));
             return embedding.Select(x => x / norm).ToArray();
         }

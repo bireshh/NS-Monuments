@@ -19,11 +19,20 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Label
-                Text="NS Monuments"
-                FontSize="22"
-                TextColor="White"
-                FontAttributes="Bold" VerticalOptions="Center"/>
+                <VerticalStackLayout VerticalOptions="Center" Spacing="1">
+                    <Label Text="🏛️ NS Monuments"
+                        FontSize="24"
+                        TextColor="White"
+                        FontAttributes="Bold">
+                        <Label.Shadow>
+                            <Shadow Brush="#80000000" Offset="0,3" Radius="5"/>
+                        </Label.Shadow>
+                    </Label>
+                    <Label Text="N O V I   S A D"
+                        FontSize="10"
+                        TextColor="#BBFFFFFF"
+                        CharacterSpacing="3"/>
+                </VerticalStackLayout>
                 <Button Grid.Column="1"
                 x:Name="jezik"
                 Text="🌐"
@@ -57,52 +66,47 @@
                     </Button.Shadow>
                 </Button>
                 </Grid>
-            <VerticalStackLayout Grid.Row="1" HorizontalOptions="Fill"
-                VerticalOptions="Center"
-                Padding="30"
-                Spacing="20">
-            <Label
-                x:Name="sken"
-                Text="Scan monuments offline"
-                TextColor="White"
-                FontSize="18"
-                HorizontalOptions="Center" ><Label.Shadow>
-                <Shadow
-                    Brush="#80000000"
-                    Offset="1,2"
-                    Radius="3" />
-                </Label.Shadow>
-            </Label> 
-            <Button
-                x:Name="slikajdugme"
-                HeightRequest="75"
-                CornerRadius="35"
-                Text="📷 Take a photo"
-                FontAttributes="Bold"
-                Clicked="Slikaj"
-                TextColor="White"
-                BackgroundColor="CornflowerBlue"
-                Opacity="0.8"
-                >
-                <Button.Shadow>
-                    <Shadow
-                        Brush="#80000000"
-                        Offset="0,8"
-                        Radius="15" />
-                </Button.Shadow>
-            </Button>
-            <Label
-                x:Name="tekstcekaj"
-                HorizontalTextAlignment="Center"
-                >
-                <Label.Shadow>
-                    <Shadow
-                        Brush="#80000000"
-                        Offset="1,2"
-                        Radius="3" />
-                </Label.Shadow>
-            </Label>
-            </VerticalStackLayout>
+            <Border Grid.Row="1"
+            BackgroundColor="#25FFFFFF"
+            Stroke="#35FFFFFF"
+            StrokeThickness="1"
+            StrokeShape="RoundRectangle 28"
+            Margin="10">
+                <VerticalStackLayout HorizontalOptions="Fill"
+                         VerticalOptions="Center"
+                         Padding="30"
+                         Spacing="20">
+                    <Label x:Name="sken"
+                    Text="Scan monuments offline"
+                    TextColor="White"
+                    FontSize="18"
+                    HorizontalOptions="Center">
+                        <Label.Shadow>
+                            <Shadow Brush="#80000000" Offset="1,2" Radius="3"/>
+                        </Label.Shadow>
+                    </Label>
+                    <Button x:Name="slikajdugme"
+                        HeightRequest="75"
+                        CornerRadius="35"
+                        Text="📷 Take a photo"
+                        FontAttributes="Bold"
+                        Clicked="Slikaj"
+                        TextColor="White"
+                        BackgroundColor="CornflowerBlue"
+                        Opacity="0.9">
+                        <Button.Shadow>
+                            <Shadow Brush="#80000000" Offset="0,8" Radius="15"/>
+                        </Button.Shadow>
+                    </Button>
+                    <Label x:Name="tekstcekaj"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White">
+                        <Label.Shadow>
+                            <Shadow Brush="#80000000" Offset="1,2" Radius="3"/>
+                        </Label.Shadow>
+                    </Label>
+                </VerticalStackLayout>
+            </Border>
             <Label Grid.Row="2"
                 x:Name="dole"
                 Text="Point your camera at a monument"

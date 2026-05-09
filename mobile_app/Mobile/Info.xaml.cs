@@ -12,13 +12,15 @@ public partial class Info : ContentPage
 	{
 		set
 		{
-			if (MainPage.jezikclicks == 1)
+            if (MainPage.jezikclicks == 1)
 			{
+				heroTitle.Text = value.MonumentNameSerbian;
 				this.Title = value.MonumentNameSerbian;
 				tekst.Text = value.DescriptionSerbian;
 			}
 			else
 			{
+                heroTitle.Text = value.MonumentName;
                 this.Title = value.MonumentName;
                 tekst.Text = value.Description;
             }

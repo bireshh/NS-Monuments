@@ -4,47 +4,48 @@
              x:Class="PrvaApp.Info"
              Title="Informations">
     <Grid>
-        <Image Source="background.jpg" Opacity="0.3" Aspect="AspectFill"/>
-        <ScrollView>
-            <VerticalStackLayout>
-                <Label></Label>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="10*"/>
-                        <ColumnDefinition Width="1*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Border Grid.Column="1" StrokeShape="RoundRectangle 10">
-                        <Image 
-                        x:Name="slika"
-                        />
-                        <Border.Shadow>
-                            <Shadow
-                            Brush="#80000000"
-                            Offset="0,8"
-                            Radius="15" />
-                        </Border.Shadow>
-                    </Border>
-                </Grid>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="8*"/>
-                        <ColumnDefinition Width="1*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="1"
-                        x:Name="tekst" FontSize="Large" HorizontalTextAlignment="Justify"
-                        >
-                        <Label.Shadow>
-                            <Shadow
-                            Brush="#80000000"
-                            Offset="1,2"
-                            Radius="3" />
-                        </Label.Shadow>
-                    </Label>
-                </Grid>
-            </VerticalStackLayout>
-        </ScrollView>
+        <Image Source="background.jpg" Opacity="0.15" Aspect="AspectFill"/>
+        <Grid RowDefinitions="260,*">
+            <Grid Grid.Row="0">
+                <Image x:Name="slika" Aspect="AspectFill"/>
+                <BoxView VerticalOptions="End" HeightRequest="110">
+                    <BoxView.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="Transparent" Offset="0"/>
+                            <GradientStop Color="#E0000000" Offset="1"/>
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Label x:Name="heroTitle"
+                       VerticalOptions="End"
+                       Padding="18,14"
+                       TextColor="White"
+                       FontSize="22"
+                       FontAttributes="Bold">
+                    <Label.Shadow>
+                        <Shadow Brush="#80000000" Offset="0,2" Radius="4"/>
+                    </Label.Shadow>
+                </Label>
+            </Grid>
+            <Border Grid.Row="1"
+                    BackgroundColor="#F2FFFFFF"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 22,22,0,0"
+                    Margin="0,-12,0,0">
+                <ScrollView>
+                    <VerticalStackLayout Spacing="0">
+                        <BoxView HeightRequest="4"
+                                 Color="CornflowerBlue"
+                                 CornerRadius="2"
+                                 Margin="20,20,20,0"/>
+                        <Label x:Name="tekst"
+                               FontSize="15"
+                               TextColor="#1C1C1C"
+                               LineHeight="1.6"
+                               Margin="20,14,20,30"/>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
     </Grid>
 </ContentPage>

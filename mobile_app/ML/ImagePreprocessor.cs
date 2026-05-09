@@ -11,7 +11,6 @@ namespace PrvaApp.ML
         private const int InputSize = 384;
         private const int ResizeSize = (int)(InputSize * 1.1); 
 
-        // ImageNet normalization constants
         private static readonly float[] Mean = { 0.485f, 0.456f, 0.406f };
         private static readonly float[] Std = { 0.229f, 0.224f, 0.225f };
 
@@ -41,8 +40,8 @@ namespace PrvaApp.ML
             var cropped = new SKBitmap(InputSize, InputSize);
             using var canvas = new SKCanvas(cropped);
             canvas.DrawBitmap(bitmap,
-                new SKRect(x, y, x + InputSize, y + InputSize), // src
-                new SKRect(0, 0, InputSize, InputSize));          // dst
+                new SKRect(x, y, x + InputSize, y + InputSize), 
+                new SKRect(0, 0, InputSize, InputSize));   
             return cropped;
         }
 
@@ -60,7 +59,6 @@ namespace PrvaApp.ML
                     float g = pixel.Green / 255f;
                     float b = pixel.Blue / 255f;
 
-                    // Normalize: (value - mean) / std
                     tensor[0, 0, y, x] = (r - Mean[0]) / Std[0];
                     tensor[0, 1, y, x] = (g - Mean[1]) / Std[1];
                     tensor[0, 2, y, x] = (b - Mean[2]) / Std[2];

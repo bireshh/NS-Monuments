@@ -1,107 +1,44 @@
 ﻿namespace PrvaApp
 {
-
     [QueryProperty(nameof(Results), "results")]
     public partial class Rezultat : ContentPage
     {
-        public Rezultat()
-        {
-            InitializeComponent();
-            
-        }
-        List<RecognitionResult> rez;
+        public Rezultat() => InitializeComponent();
 
-        public static string NadjiSliku(string s)
-        {
-            s = Norm(s);
-            string[] niz = s.Split(" ");
-            string novi = string.Join("_", niz);
-            return "Slike/" + novi + ".jpg";
-        }
-        public static string Norm(string s)
-        {
-            s = s.Replace('é', 'e');
-            s = s.Replace('ć', 'c');
-            s = s.Replace('Ć','C');
-            s = s.Replace('č','c');
-            s = s.Replace('Č','C');
-            s = s.Replace('Š','S');
-            s = s.Replace('š','s');
-            s = s.Replace('đ','d');
-            s = s.Replace('Đ','D');
-            s = s.Replace('Ž','Z');
-            s = s.Replace('ž','z');
-            return s;
-        }
-        
+        public static string NadjiSliku(string s) =>
+            "Slike/" + string.Join("_", Norm(s).Split(" ")) + ".jpg";
+
+        public static string Norm(string s) =>
+            s.Replace('é', 'e').Replace('ć', 'c').Replace('Ć', 'C')
+             .Replace('č', 'c').Replace('Č', 'C').Replace('Š', 'S')
+             .Replace('š', 's').Replace('đ', 'd').Replace('Đ', 'D')
+             .Replace('Ž', 'Z').Replace('ž', 'z');
+
         public List<RecognitionResult> Results
         {
             set
             {
-                rez = value;
-                prvaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[0].MonumentName)).Result);
-                prvitekst.Text = value[0].MonumentName;
-                drugaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[1].MonumentName)).Result);
-                drugitekst.Text = value[1].MonumentName;
-                trecaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[2].MonumentName)).Result);
-                trecitekst.Text = value[2].MonumentName;
-                cetvrtaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[3].MonumentName)).Result);
-                cetvrtitekst.Text = value[3].MonumentName;
-                petaslika.Source = ImageSource.FromStream(() => FileSystem.OpenAppPackageFileAsync(NadjiSliku(value[4].MonumentName)).Result);
-                petitekst.Text = value[4].MonumentName;
-                najb.Text = "★ Best Match";
-                if (MainPage.jezikclicks == 1)
+                bool sr = MainPage.jezikclicks == 1;
+                if (sr) { Title = "Rezultat"; infot.Text = "Tapnite za više informacija"; }
+
+                resultsCollection.ItemsSource = value.Select((r, i) => new ResultDisplay
                 {
-                    this.Title = "Rezultat";
-                    prvitekst.Text = value[0].MonumentNameSerbian;
-                    drugitekst.Text = value[1].MonumentNameSerbian;
-                    trecitekst.Text = value[2].MonumentNameSerbian;
-                    cetvrtitekst.Text = value[3].MonumentNameSerbian;
-                    petitekst.Text = value[4].MonumentNameSerbian;
-                    infot.Text = "Kliknite za više informacija";
-                    najb.Text = "★ Najsličnije";
-                }
+                    Rank = i + 1,
+                    Name = sr ? r.MonumentNameSerbian : r.MonumentName,
+                    BestMatchLabel = sr ? "★ Najsličnije" : "★ Best Match",
+                    Image = ImageSource.FromStream(() =>
+                        FileSystem.OpenAppPackageFileAsync(NadjiSliku(r.MonumentName)).Result),
+                    Original = r
+                }).ToList();
             }
         }
-        private async void klik1(Object sender , EventArgs e)
+
+        private async void OnResultSelected(object sender, SelectionChangedEventArgs e)
         {
-            var navigationParameter = new Dictionary<string, object>
-                {
-                    { "info", rez[0] }
-                };
-            await Shell.Current.GoToAsync("info", navigationParameter);
-        }
-        private async void klik2(Object sender, EventArgs e)
-        {
-            var navigationParameter = new Dictionary<string, object>
-                {
-                    { "info", rez[1] }
-                };
-            await Shell.Current.GoToAsync("info", navigationParameter);
-        }
-        private async void klik3(Object sender, EventArgs e)
-        {
-            var navigationParameter = new Dictionary<string, object>
-                {
-                    { "info", rez[2] }
-                };
-            await Shell.Current.GoToAsync("info", navigationParameter);
-        }
-        private async void klik4(Object sender, EventArgs e)
-        {
-            var navigationParameter = new Dictionary<string, object>
-                {
-                    { "info", rez[3] }
-                };
-            await Shell.Current.GoToAsync("info", navigationParameter);
-        }
-        private async void klik5(Object sender, EventArgs e)
-        {
-            var navigationParameter = new Dictionary<string, object>
-                {
-                    { "info", rez[4] }
-                };
-            await Shell.Current.GoToAsync("info", navigationParameter);
+            if (e.CurrentSelection.FirstOrDefault() is not ResultDisplay sel) return;
+            await Shell.Current.GoToAsync("info",
+                new Dictionary<string, object> { { "info", sel.Original } });
+            resultsCollection.SelectedItem = null; // deselect after nav
         }
     }
 }
